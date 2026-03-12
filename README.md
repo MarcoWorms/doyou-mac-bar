@@ -1,0 +1,47 @@
+# DO!!YOU!!! Radio Menu Bar App
+
+Small native macOS menu bar app for the live DO!!YOU!!! radio stream.
+
+It uses the stream exposed by the public player page at `https://doyou.world/pages/player` and packages a ready-to-run app in `dist/`.
+
+## Behavior
+
+- Left click the menu bar icon to start or stop the stream immediately
+- Right click the icon to open the options menu
+- Open the original player page from the menu if you want the full web player
+- Quit without leaving a Dock icon behind
+
+## Project Layout
+
+- `Sources/DOYOUMenuBarRadio/main.swift`: native AppKit app and AVPlayer wiring
+- `Resources/Info.plist`: bundle metadata for the menu bar app
+- `scripts/build_app.sh`: rebuilds the signed `.app` bundle with `swiftc`
+- `dist/DOYOU Radio.app`: built app bundle
+- `dist/DOYOU Radio.zip`: zipped distributable copy of the app
+
+## Requirements
+
+- macOS 13 or newer
+- Xcode Command Line Tools
+
+## Build
+
+```sh
+./scripts/build_app.sh
+```
+
+That produces:
+
+- `dist/DOYOU Radio.app`
+- an ad-hoc signed bundle that launches as a menu bar app
+
+## Run
+
+```sh
+open "dist/DOYOU Radio.app"
+```
+
+## Notes
+
+- The live stream URL currently used by the app is `https://doyouworld.out.airtime.pro/doyouworld_a`
+- The built app in `dist/` is committed so the repo can be cloned and run immediately
