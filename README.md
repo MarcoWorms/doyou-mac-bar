@@ -1,5 +1,7 @@
 # DO!!YOU!!! Radio Menu Bar App
 
+<img width="362" height="329" alt="Screenshot 2026-03-12 at 14 19 38" src="https://github.com/user-attachments/assets/2b2fc55f-91af-4075-9d68-4217bbe4229f" />​​
+
 Small native macOS menu bar app for the live DO!!YOU!!! radio stream.
 
 It uses the stream exposed by the public player page at `https://doyou.world/pages/player` and packages a ready-to-run app in `dist/`.
